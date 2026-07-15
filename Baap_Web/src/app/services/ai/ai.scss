@@ -1,0 +1,109 @@
+.background-grid {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 0;
+}
+
+.text-head {
+    font-size: 70px;
+}
+
+.main {
+  background-color: #030014;
+}
+
+.head {
+  background: #08081f;
+  font-family: "Segoe UI", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.text {
+  font-size: 70px;
+}
+.image {
+  border-radius: 25px;
+  max-width: 100%;
+  height: auto;
+}
+
+.bg-btn {
+  background: linear-gradient(to right, #8f00ff, #5715d8);
+}
+
+.card-body-img{
+    height: 5rem;
+}
+.card{
+    background-color: #09072C;
+}
+.card:hover {
+  cursor: pointer;
+  box-shadow: 0px 7px 29px 0px rgba(194, 164, 241, 0.5) !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.area {
+  border-top: 0.5px solid #C8C8C81C;
+}
+.area:hover{
+    background-color: #09072C;
+}
+
+
+//Animation
+
+.animate-head span,
+.animate-head h1,
+.animate-head p {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeSlideUp 1.5s ease forwards;
+}
+
+.animate-head span {
+  animation-delay: 0.3s;
+}
+.animate-head h1 {
+  animation-delay: 0.6s;
+}
+.animate-head p {
+  animation-delay: 1s;
+}
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.area {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.8s ease-out;
+}
+
+.area.reveal {
+  opacity: 1;
+  transform: translateX(0);
+}

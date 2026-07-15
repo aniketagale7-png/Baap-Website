@@ -1,0 +1,150 @@
+<div class="container-fluid main">
+  <div class="head text-center align-items-center text-white">
+    <div class="background-grid mt-5"></div>
+
+    <div class="position-relative z-1 p-3 animate-head">
+      <span
+        class="badge rounded-pill px-3 py-2 mb-3"
+        style="background: #6c2bd9; margin-top: 50px"
+      >
+        AI Services
+      </span>
+      <h1
+        class="fw-bold text-head text-white display-5 display-md-4 display-sm-5 mt-5 pt-5"
+      >
+        CUTTING-EDGE <br class="d-none d-md-block" />
+        DEVELOPMENT
+      </h1>
+      <p class="text-secondary mt-3 fs-5 fs-md-6">
+        We believe artificial intelligence isn’t just for tech giants, it’s a
+        tool that can
+        <br class="d-none d-md-block" />
+        transform industries, empower businesses, and create global impact.
+      </p>
+    </div>
+  </div>
+
+  <section
+    *ngFor="let fpc of fpcData; let i = index"
+    class="mx-5 pt-5 pb-5 mt-5 min-vh-100 d-flex align-items-center reveal"
+  >
+    <div class="row w-100 align-items-center">
+      <div
+        class="col-lg-6 col-md-12"
+        [ngClass]="{ 'order-lg-2': i % 2 !== 0, 'pl-5': i % 2 !== 0 }"
+      >
+        <h1 class="fw-bold mt-3 fs-1 text-white">{{ fpc.title }}</h1>
+        <p class="text-secondary fw-bold mt-3">{{ fpc.desc }}</p>
+
+        <ul class="list-unstyled fw-bold text-secondary mt-5">
+          <li *ngFor="let point of fpc.points" class="mb-2">
+            <i class="fa-solid fa-check" style="color: #7300ff"></i> {{ point }}
+          </li>
+        </ul>
+
+        <button
+          class="btn bg-btn word-space-2 mt-5 text-white rounded-pill px-4 py-2"
+        >
+          <b>Get Started <i class="bi bi-arrow-up-right ps-2"></i></b>
+        </button>
+      </div>
+
+      <div class="col-lg-6 col-md-12" [ngClass]="{ 'order-lg-1': i % 2 !== 0 }">
+        <img [src]="fpc.img" class="img-fluid rounded-4" [alt]="fpc.title" />
+      </div>
+    </div>
+  </section>
+  <section class="py-5">
+    <h2 class="container fw-bold fs-1 mt-4 text-white mb-5">Our Approach</h2>
+
+    <div class="row mx-5 pt-4">
+      <div class="col-md-4">
+        <div class="card h-100 text-white rounded-5 p-4 shadow">
+          <div class="card-body">
+            <div class="mb-3 fs-1">
+              <img
+                class="card-body-img"
+                src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%23ffffff%22%20viewBox%3D%220%200%20256%20256%22%3E%0A%20%20%3Cpath%20d%3D%22M192.5%2C171.47A88.34%2C88.34%2C0%2C0%2C0%2C224%2C101.93c-1-45.71-37.61-83.4-83.24-85.8A88%2C88%2C0%2C0%2C0%2C48%2C102L25.55%2C145.18c-.09.18-.18.36-.26.54a16%2C16%2C0%2C0%2C0%2C7.55%2C20.62l.25.11L56%2C176.94V208a16%2C16%2C0%2C0%2C0%2C16%2C16h48a8%2C8%2C0%2C0%2C0%2C0-16H72V171.81a8%2C8%2C0%2C0%2C0-4.67-7.28L40%2C152l23.07-44.34A7.9%2C7.9%2C0%2C0%2C0%2C64%2C104a72%2C72%2C0%2C0%2C1%2C56-70.21V49.38a24%2C24%2C0%2C1%2C0%2C16%2C0V32c1.3%2C0%2C2.6%2C0%2C3.9.1A72.26%2C72.26%2C0%2C0%2C1%2C203.84%2C80H184a8%2C8%2C0%2C0%2C0-6.15%2C2.88L152.34%2C113.5a24.06%2C24.06%2C0%2C1%2C0%2C12.28%2C10.25L187.75%2C96h19.79q.36%2C3.12.44%2C6.3a72.26%2C72.26%2C0%2C0%2C1-28.78%2C59.3%2C8%2C8%2C0%2C0%2C0-3.14%2C7.39l8%2C64a8%2C8%2C0%2C0%2C0%2C7.93%2C7%2C8.39%2C8.39%2C0%2C0%2C0%2C1-.06%2C8%2C8%2C0%2C0%2C0%2C6.95-8.93ZM128%2C80a8%2C8%2C0%2C1%2C1%2C8-8A8%2C8%2C0%2C0%2C1%2C128%2C80Zm16%2C64a8%2C8%2C0%2C1%2C1%2C8-8A8%2C8%2C0%2C0%2C1%2C144%2C144Z%22%3E%3C%2Fpath%3E%0A%3C%2Fsvg%3E%0A"
+                alt=""
+              />
+            </div>
+            <h3 class="card-title pt-4">Grassroots Meets AI</h3>
+            <p class="card-text mb-3">
+              A unique approach that merges grassroots expertise with
+              world-class AI
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 text-white rounded-4 p-4 shadow">
+          <div class="card-body">
+            <div class="mb-3 fs-1">
+              <img
+                class="card-body-img"
+                src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%23ffffff%22%20viewBox%3D%220%200%20256%20256%22%3E%0A%20%20%3Cpath%20d%3D%22M230.33%2C141.06a24.34%2C24.34%2C0%2C0%2C0-18.61-4.77C230.5%2C117.33%2C240%2C98.48%2C240%2C80c0-26.47-21.29-48-47.46-48A47.58%2C47.58%2C0%2C0%2C0%2C156%2C48.75%2C47.58%2C47.58%2C0%2C0%2C0%2C119.46%2C32C93.29%2C32%2C72%2C53.53%2C72%2C80c0%2C11%2C3.24%2C21.69%2C10.06%2C33a31.87%2C31.87%2C0%2C0%2C0-14.75%2C8.4L44.69%2C144H16A16%2C16%2C0%2C0%2C0%2C0%2C160v40a16%2C16%2C0%2C0%2C0%2C16%2C16H120a7.93%2C7.93%2C0%2C0%2C0%2C1.94-.24l64-16a6.94%2C6.94%2C0%2C0%2C0%2C1.19-.4L226%2C182.82l.44-.2a24.6%2C24.6%2C0%2C0%2C0%2C3.93-41.56ZM119.46%2C48A31.15%2C31.15%2C0%2C0%2C1%2C148.6%2C67a8%2C8%2C0%2C0%2C0%2C14.8%2C0%2C31.15%2C31.15%2C0%2C0%2C1%2C29.14-19C209.59%2C48%2C224%2C62.65%2C224%2C80c0%2C19.51-15.79%2C41.58-45.66%2C63.9l-11.09%2C2.55A28%2C28%2C0%2C0%2C0%2C140%2C112H100.68C92.05%2C100.36%2C88%2C90.12%2C88%2C80%2C88%2C62.65%2C102.41%2C48%2C119.46%2C48ZM16%2C160H40v40H16Zm203.43%2C8.21-38%2C16.18L119%2C200H56V155.31l22.63-22.62A15.86%2C15.86%2C0%2C0%2C1%2C89.94%2C128H140a12%2C12%2C0%2C0%2C1%2C0%2C24H112a8%2C8%2C0%2C0%2C0%2C0%2C16h32a8.32%2C8.32%2C0%2C0%2C0%2C1.79-.2l67-15.41.31-.08a8.6%2C8.6%2C0%2C0%2C1%2C6.3%2C15.9Z%22%3E%3C%2Fpath%3E%0A%3C%2Fsvg%3E%0A"
+                alt=""
+              />
+            </div>
+            <h3 class="card-title pt-4">Human Expertise</h3>
+            <p class="card-text">
+              Solutions designed to enhance, not replace, human expertise
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 text-white rounded-4 p-4 shadow">
+          <div class="card-body">
+            <div class="mb-3 fs-1">
+              <img
+                class="card-body-img"
+                src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%23ffffff%22%20viewBox%3D%220%200%20256%20256%22%3E%0A%20%20%3Cpath%20d%3D%22M200%2C48H136V16a8%2C8%2C0%2C0%2C0-16%2C0V48H56A32%2C32%2C0%2C0%2C0%2C24%2C80V192a32%2C32%2C0%2C0%2C0%2C32%2C32H200a32%2C32%2C0%2C0%2C0%2C32-32V80A32%2C32%2C0%2C0%2C0%2C200%2C48Zm16%2C144a16%2C16%2C0%2C0%2C1-16%2C16H56a16%2C16%2C0%2C0%2C1-16-16V80A16%2C16%2C0%2C0%2C1%2C56%2C64H200a16%2C16%2C0%2C0%2C1%2C16%2C16Zm-52-56H92a28%2C28%2C0%2C0%2C0%2C0%2C56h72a28%2C28%2C0%2C0%2C0%2C0-56Zm-24%2C16v24H116V152ZM80%2C164a12%2C12%2C0%2C0%2C1%2C12-12h8v24H92A12%2C12%2C0%2C0%2C1%2C80%2C164Zm84%2C12h-8V152h8a12%2C12%2C0%2C0%2C1%2C0%2C24ZM72%2C108a12%2C12%2C0%2C1%2C1%2C12%2C12A12%2C12%2C0%2C0%2C1%2C72%2C108Zm88%2C0a12%2C12%2C0%2C1%2C1%2C12%2C12A12%2C12%2C0%2C0%2C1%2C160%2C108Z%22%3E%3C%2Fpath%3E%0A%3C%2Fsvg%3E%0A"
+                alt=""
+              />
+            </div>
+            <h3 class="card-title pt-4">Adaptive & Scalable AI</h3>
+            <p class="card-text mb-3">
+              AI that grows with your business and adapts to market changes
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-5 text-white">
+    <div class="">
+      <div class="row align-items-center px-5 mb-5">
+        <div class="col-md-6">
+          <h2 class="fw-bold display-5 d-flex align-items-center">
+            Why Choose Us?
+          </h2>
+        </div>
+        <div class="col-md-6">
+          <p class="mb-0 text-white">
+            At Baap, we deliver innovative, tailored solutions that drive real
+            results. Our expert team ensures seamless integration with your
+            existing systems while prioritizing your unique business needs.
+          </p>
+        </div>
+      </div>
+
+      <div class="row area pt-3" *ngFor="let area of businessAreas">
+        <div class="col-md-6 pt-5 pb-5 px-5">
+          <h4 class="pl-3">{{ area.title }}</h4>
+        </div>
+        <div class="col-md-6">
+          <p class="pt-5 pb-4 fw-bold text-secondary">
+            {{ area.description }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="mt-5 pt-5">
+    <app-footer></app-footer>
+  </div>
+</div>

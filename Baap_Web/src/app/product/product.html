@@ -1,0 +1,215 @@
+<div class="cursor-dot" [style.left.px]="x" [style.top.px]="y" [class.active]="isActive" [class.pressed]="isPressed">
+    <span class="icon">⬤</span>
+</div>
+<div class="main mt-5">
+    <div class="  m-0 p-0">
+        <div class="m-0 p-0 innovating">
+            <div class="pt-5 mt-5 text-center">
+                <button class="btn bg-btn word-space-2 mt-5 text-white rounded-pill px-4 py-2">
+                    <b>Our Products</b>
+                </button>
+
+                <h1 class="text-uppercase mt-3 text-white font-weight-bold">
+                    Scalable Tech<br> Products Designed<br> for Success
+                </h1>
+                <h5 class="text-white-50 lead fw-medium mt-5 pt-2">
+                    At The Baap Company, we build powerful, intuitive, and scalable software solutions<br> that help
+                    businesses
+                    operate efficiently, make data-driven decisions, and scale with<br> confidence. Our CRM, ERP,
+                    E-Commerce,
+                    and School ERP solutions are designed to <br>simplify processes and enhance productivity, enabling
+                    businesses to focus on what<br> truly matters—growth and success.
+                </h5>
+            </div>
+        </div>
+        <div class="p-5 fade-up ">
+            <img src="https://baapcompany.com/wp-content/uploads/2025/02/thebaapcompany_products_bg-1536x514-1.png"
+                alt="" class="rounded-5 img-fluid fixed-img">
+        </div>
+        <div class="row p-5 fade-up" *ngFor="let service of services; let i = index">
+            <!-- Image left -->
+            <div class="col-6" *ngIf="service.imgPosition === 'left'">
+                <img [src]="service.img" alt="{{service.title}}" class="rounded-5 img-fluid fixed-img">
+            </div>
+
+            <!-- Text section -->
+            <div class="col-6 mt-5 p-5">
+                <button class="btn bg-btn word-space-2 mt-5 text-white rounded-pill px-4 py-2 mt-4">
+                    <b>{{service.title}}</b>
+                </button>
+                <div class="text-uppercase-row text-white font-weight-bold">
+                    {{service.subtitle}}
+                </div>
+                <div class="text-white">
+                    {{service.description}}
+                </div>
+
+                <div class="row text-white mt-5">
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li class="mb-2" *ngFor="let feature of service.featuresLeft">
+                                <i class="bi bi-check2 me-2 text-purple"></i> {{feature}}
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li class="mb-2" *ngFor="let feature of service.featuresRight">
+                                <i class="bi bi-check2 me-2 text-purple"></i> {{feature}}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div>
+                    <button class="btn bg-btn word-space-2 mt-5 text-white rounded-pill px-5 py-3">
+                        <b>Talk to Us</b>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Image right -->
+            <div class="col-6" *ngIf="service.imgPosition === 'right'">
+                <img [src]="service.img" alt="{{service.title}}" class="rounded-5 img-fluid fixed-img">
+            </div>
+        </div>
+
+
+
+
+
+        <div class="text-center mt-5 pt-5 ">
+            <button class="btn bg-btn word-space-2 text-white mt-5 rounded-pill px-4 py-2 fade-up ">
+                Testimonials
+            </button>
+            <h1 class="text-white pt-5 fade-up "><b>What Our Clients & Partners Say</b></h1>
+            <p class="text-white-50 pt-4 word-space-2 fade-up ">
+                From visionary businessmen visiting our village to collaborate, to
+                outsiders marvelling at how<br />
+                our model bridges farming and tech, our testimonials reflect the growing
+                belief that innovation<br />
+                truly has no boundaries.
+            </p>
+        </div>
+        <div class="custom-carousel mx-auto overflow-hidden fade-up">
+            <div class="custom-carousel-track d-flex"
+                [style.transform]="'translateX(-' + currentIndex * cardWidth + 'px)'"
+                style="transition: transform 0.5s ease-in-out">
+                <div *ngFor="let card of cards"
+                    class="custom-carousel-card card text-white p-4 mx-4 border-0 rounded-4 mx-2">
+                    <div class="justify-content-between d-flex fade-up">
+                        <div class="text-start mt-3">
+                            <img [src]="card.img1" class="rounded-circle mb-3" width="80" height="80" />
+                        </div>
+                        <div class="text-start mt-3">
+                            <img [src]="card.img2" class="mb-3" width="60" height="60" />
+                        </div>
+                    </div>
+                    <h4 class="font-weight-bold mb-1 mt-2">{{ card.name }}</h4>
+                    <p class="mb-3 mt-2">{{ card.title }}</p>
+                    <small class="mt-2 mb-4 word-space-2">{{ card.text }}</small>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center mt-5">
+                <button
+                    class="d-flex align-items-center mx-4 carousel-button justify-content-center rounded-circle border border-white text-white bg-transparent"
+                    (click)="prevCard()">
+                    &larr;
+                </button>
+                <button
+                    class="d-flex align-items-center carousel-button justify-content-center rounded-circle border border-white text-white bg-transparent ml-3"
+                    (click)="nextCard()">
+                    &rarr;
+                </button>
+            </div>
+        </div>
+        <div class="row ai-container text-white p-5 m-5 fade-up align-items-center">
+            <!-- Left Section -->
+            <div class="col-md-6 mb-4 mb-md-0">
+                <h2 class="mb-3">
+                    Baap now offers <span>AI Services</span>
+                </h2>
+                <p class="mb-4 fs-6">
+                    Ready to unlock the potential of AI for your business? Talk to us to get
+                    a tailored solution today!
+                </p>
+                <button class="talk-button bg-white text-primary">
+                    <b>Talk to Us</b>
+                </button>
+            </div>
+
+            <!-- Right Section -->
+            <div class="col-md-6 text-center">
+                <img src="https://baapcompany.com/wp-content/uploads/2025/02/AI-Software-Company-CTA-Image-3.webp"
+                    alt="AI Robot" class="robot small img-fluid" style="max-height: 325px; width: auto;" />
+            </div>
+        </div>
+
+        <!-- <footer class="footer-container  p-5 ">
+            <div class="container">
+                <div class="row align-items-start fade-up">
+
+                    <div class="col-lg-5 col-md-6 col-sm-12 mb-4">
+                        <div class="footer-logo mb-3">
+                            <img src="https://baapcompany.com/wp-content/uploads/2025/07/Frame_1000009382-removebg-preview.png"
+                                height="70px" width="50%" alt="Baap Company" class="logo-img" />
+                        </div>
+
+                        <div class="social-icons">
+                            <a class="text-center text-white mr-2" href="#"><i class="fab fa-instagram"></i></a>
+                            <a class="text-center text-white mr-2" href="#"><i class="fab fa-linkedin"></i></a>
+                            <a class="text-center text-white mr-2" href="#"><i class="fab fa-facebook"></i></a>
+                            <a class="text-center text-white mr-2" href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-3 col-sm-6 mb-4">
+                        <h5 class="mb-3 text-white">Services</h5>
+                        <ul class="footer-links p-0">
+                            <li><a href="#">Software Services</a></li>
+                            <li><a href="#">AI Services</a></li>
+                            <li><a href="#">Digital Marketing</a></li>
+                            <li><a href="#">Data Analytics</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-md-3 col-sm-6 mb-4">
+                        <h5 class="mb-3 text-white">Company</h5>
+                        <ul class="footer-links p-0">
+                            <li><a href="#">About Baap</a></li>
+                            <li><a href="#">Products</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                        <h5 class="mb-3 text-white">Initiatives</h5>
+                        <ul class="footer-links p-0">
+                            <li><a href="#">Education</a></li>
+                            <li><a href="#">Gao Gotha</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="footer-bottom mt-4">
+                    <div class="d-flex justify-content-between flex-wrap">
+                        <div>
+                            <a href="#">Terms of Service</a> &nbsp;|&nbsp;
+                            <a href="#">Privacy Policy</a>
+                        </div>
+                        <div>
+                            <span>
+                                <h6 class="text-white">2025 © Baap Services Private Limited</h6>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer> -->
+    <app-footer></app-footer>
+    </div>
+
+</div>

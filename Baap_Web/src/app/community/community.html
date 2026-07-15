@@ -1,0 +1,242 @@
+<div class="main container-fluid">
+<div class="container-fluid pt-5 p-0 ">
+  <div class="pt-5 innovating text-center d-flex flex-column justify-content-center align-items-center">
+    <button
+      class="btn bg-btn word-space-2 mt-5 text-white rounded-pill px-4 py-2"
+    >
+      <b>Community Initiatives</b>
+    </button>
+
+    <h1 class="text-uppercase mt-3 text-white font-weight-bold">
+      Innovating for <br />Rural Empowerment
+    </h1>
+
+    <h5 class="text-white-50 mt-5 lead pt-2">
+      Gaon Gotha is a transformative initiative by The Baap Company aimed at
+      fostering<br />
+      sustainable rural development through a crowdfunded dairy farm, an old
+      age home,<br />
+      and an employment program for local youth.
+    </h5>
+  </div>
+</div>
+
+  <div class="img fade-up fade-up.show mx-5">
+    <img
+      src="https://baapcompany.com/wp-content/uploads/2025/02/thebaapcompany_community_bg-scaled-e1739542909965-r1hxk2xwe3s1a41kca0b0t9s0gqw5br7z64rjxj97c-1536x467.jpg"
+      class="w-100 mb-5 rounded-5 img-details"
+      alt=""
+    />
+  </div>
+
+  <div class="row mx-5 fade-up fade-up.show pt-5">
+    <div class="col-lg-6">
+      <p class="fs-1 text-white font-weight-bold">The FPC Model</p>
+    </div>
+    <div class="col-lg-6">
+      <p class="text-secondary">
+        Gaon Gotha follows a circular economy model, where every element feeds
+        into the next, creating a sustainable cycle of growth. From fodder
+        production to organic fertilizers, dairy processing to bio-energy, each
+        FPC is a pillar that strengthens rural livelihoods while integrating
+        them into the global economy.
+      </p>
+    </div>
+  </div>
+  <section
+    *ngFor="let fpc of fpcData; let i = index"
+    class="mx-5 fade-up fade-up.show pt-5 pb-5 mt-5 min-vh-100 d-flex align-items-center"
+  >
+    <div class="row w-100 align-items-center">
+      <div
+        class="col-lg-6 col-md-12"
+        [ngClass]="{ 'order-lg-2': i % 2 !== 0, 'pl-5': i % 2 !== 0 }"
+      >
+        <button
+          class="btn bg-btn word-space-2 mt-5 text-white rounded-pill px-4 py-2"
+        >
+          <b>{{ fpc.id }}</b>
+        </button>
+
+        <h1 class="fw-bold mt-3 fs-1 text-white">{{ fpc.title }}</h1>
+        <p class="text-secondary fw-bold mt-3">{{ fpc.desc }}</p>
+
+        <ul class="list-unstyled fw-bold text-secondary mt-5">
+          <li *ngFor="let point of fpc.points" class="mb-2">
+            <i class="fa-solid fa-check" style="color: #7300ff"></i> {{ point }}
+          </li>
+        </ul>
+
+        <button
+          class="btn bg-btn word-space-2 mt-5 text-white rounded-pill px-4 py-2"
+        >
+          <b>Talk to Us <i class="bi bi-arrow-up-right ps-2"></i></b>
+        </button>
+      </div>
+
+      <div class="col-lg-6 col-md-12" [ngClass]="{ 'order-lg-1': i % 2 !== 0 }">
+        <img [src]="fpc.img" class="img-fluid rounded-4" [alt]="fpc.title" />
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="Impact pt-5 pb-5">
+  <section class="text-center fade-up fade-up.show mx-5">
+    <button
+      class="btn bg-btn word-space-2 mt-5 text-white rounded-pill px-4 py-2"
+    >
+      <b>Moments of Impact </b>
+    </button>
+    <h2 class="fw-bold fs-1 text-white">Our Community in Action</h2>
+    <p class="text-secondary font-weight-bold pt-3 mb-4">
+      A glimpse into the vibrant spirit of our community—capturing
+      collaboration,<br />
+      growth, and meaningful connections that drive change.
+    </p>
+
+    <div class="row mt-5">
+      <div class="col-md-4">
+        <img
+          src="https://baapcompany.com/wp-content/uploads/2025/02/thebaapcompany_community_gallery1-scaled-1.jpg"
+          class="w-100 Images rounded-5"
+        />
+      </div>
+      <div class="col-md-4">
+        <img
+          src="https://baapcompany.com/wp-content/uploads/2025/02/thebaapcompany_community_gallery2-scaled-1.jpg"
+          class="w-100 Images rounded-5"
+          alt="Community 2"
+        />
+      </div>
+      <div class="col-md-4">
+        <img
+          src="https://baapcompany.com/wp-content/uploads/2025/02/thebaapcompany_community_gallery3-scaled-1.jpg"
+          class="w-100 Images rounded-5"
+          alt="Community 3"
+        />
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-md-4">
+        <img
+          src="https://baapcompany.com/wp-content/uploads/2025/02/thebaapcompany_community_gallery4-scaled-1.jpg"
+          class="w-100 Images rounded-5"
+        />
+      </div>
+      <div class="col-md-4">
+        <img
+          src="https://baapcompany.com/wp-content/uploads/2025/02/thebaapcompany_community_gallery5-scaled-1.jpg"
+          class="w-100 Images rounded-5"
+          alt="Community 2"
+        />
+      </div>
+      <div class="col-md-4">
+        <img
+          src="https://baapcompany.com/wp-content/uploads/2025/02/thebaapcompany_community_gallery6-scaled-1.jpg"
+          class="w-100 Images rounded-5"
+          alt="Community 3"
+        />
+      </div>
+    </div>
+  </section>
+</div>
+<div class="main">
+  <section class="container-fluid fade-up fade-up.show py-5">
+    <h2 class="fw-bold fs-1 mt-4 text-center text-white mb-5">
+      Our Impact & Infrastructure Development
+    </h2>
+
+    <div class="row mx-5 pt-4">
+      <div class="col-md-4">
+        <div class="card h-100 text-white rounded-5 p-4 shadow">
+          <div class="card-body">
+            <div class="mb-3 fs-1">
+              <img
+                class="card-body-img"
+                src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20style%3D%22height%3A%205rem%22%20viewBox%3D%220%200%20256%20256%22%3E%0A%20%20%3Cpath%20fill%3D%22white%22%20d%3D%22M240%2C208H224V136l2.34%2C2.34A8%2C8%2C0%2C0%2C0%2C237.66%2C127L139.31%2C28.68a16%2C16%2C0%2C0%2C0-22.62%2C0L18.34%2C127a8%2C8%2C0%2C0%2C0%2C11.32%2C11.31L32%2C136v72H16a8%2C8%2C0%2C0%2C0%2C0%2C16H240a8%2C8%2C0%2C0%2C0%2C0-16ZM48%2C120l80-80%2C80%2C80v88H160V152a8%2C8%2C0%2C0%2C0-8-8H104a8%2C8%2C0%2C0%2C0-8%2C8v56H48Zm96%2C88H112V160h32Z%22%3E%3C%2Fpath%3E%0A%3C%2Fsvg%3E%0A"
+                alt=""
+              />
+            </div>
+            <h3 class="card-title pt-4">Providing Homes</h3>
+            <p class="card-text mb-3">
+              Safe and comfortable housing for elderly individuals in need.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 text-white rounded-4 p-4 shadow">
+          <div class="card-body">
+            <div class="mb-3 fs-1">
+              <img
+                class="card-body-img"
+                src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22white%22%20viewBox%3D%220%200%20256%20256%22%3E%0A%20%20%3Cpath%20d%3D%22M240%2C165.41V134a15.89%2C15.89%2C0%2C0%2C0-11.4-15.32l-.21-.06L192%2C108.71V72a8%2C8%2C0%2C0%2C0-16%2C0v32.38l-24-6.5V56h8a8%2C8%2C0%2C0%2C0%2C0-16H40a8%2C8%2C0%2C0%2C0%2C0%2C16h8V88H40a8%2C8%2C0%2C0%2C0%2C0%2C16H68a68.07%2C68.07%2C0%2C0%2C1%2C68%2C68v12a8%2C8%2C0%2C0%2C0%2C8%2C8h32.23A36%2C36%2C0%2C1%2C0%2C240%2C165.41ZM68%2C88H64V56h72v66.77A83.92%2C83.92%2C0%2C0%2C0%2C68%2C88Zm84%2C26.45L224%2C134v20.1A36%2C36%2C0%2C0%2C0%2C178.06%2C176H152ZM212%2C208a20%2C20%2C0%2C1%2C1%2C20-20A20%2C20%2C0%2C0%2C1%2C212%2C208ZM68%2C120a52%2C52%2C0%2C1%2C0%2C52%2C52A52.06%2C52.06%2C0%2C0%2C0%2C68%2C120Zm0%2C88a36%2C36%2C0%2C1%2C1%2C36-36A36%2C36%2C0%2C0%2C1%2C68%2C208Zm12-36a12%2C12%2C0%2C1%2C1-12-12A12%2C12%2C0%2C0%2C1%2C80%2C172Z%22%3E%3C%2Fpath%3E%0A%3C%2Fsvg%3E%0A"
+                alt=""
+              />
+            </div>
+            <h3 class="card-title pt-4">Preliminary Infrastructure</h3>
+            <p class="card-text">
+              Essential facilities for farming, dairy processing, and old-age
+              care.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 text-white rounded-4 p-4 shadow">
+          <div class="card-body">
+            <div class="mb-3 fs-1">
+              <img
+                class="card-body-img"
+                src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22white%22%20viewBox%3D%220%200%20256%20256%22%3E%0A%20%20%3Cpath%20d%3D%22M230.33%2C141.06a24.34%2C24.34%2C0%2C0%2C0-18.61-4.77C230.5%2C117.33%2C240%2C98.48%2C240%2C80c0-26.47-21.29-48-47.46-48A47.58%2C47.58%2C0%2C0%2C0%2C156%2C48.75%2C47.58%2C47.58%2C0%2C0%2C0%2C119.46%2C32C93.29%2C32%2C72%2C53.53%2C72%2C80c0%2C11%2C3.24%2C21.69%2C10.06%2C33a31.87%2C31.87%2C0%2C0%2C0-14.75%2C8.4L44.69%2C144H16A16%2C16%2C0%2C0%2C0%2C0%2C160v40a16%2C16%2C0%2C0%2C0%2C16%2C16H120a7.93%2C7.93%2C0%2C0%2C0%2C1.94-.24l64-16a6.94%2C6.94%2C0%2C0%2C0%2C1.19-.4L226%2C182.82l.44-.2a24.6%2C24.6%2C0%2C0%2C0%2C3.93-41.56ZM119.46%2C48A31.15%2C31.15%2C0%2C0%2C1%2C148.6%2C67a8%2C8%2C0%2C0%2C0%2C14.8%2C0%2C31.15%2C31.15%2C0%2C0%2C1%2C29.14-19C209.59%2C48%2C224%2C62.65%2C224%2C80c0%2C19.51-15.79%2C41.58-45.66%2C63.9l-11.09%2C2.55A28%2C28%2C0%2C0%2C0%2C140%2C112H100.68C92.05%2C100.36%2C88%2C90.12%2C88%2C80%2C88%2C62.65%2C102.41%2C48%2C119.46%2C48ZM16%2C160H40v40H16Zm203.43%2C8.21-38%2C16.18L119%2C200H56V155.31l22.63-22.62A15.86%2C15.86%2C0%2C0%2C1%2C89.94%2C128H140a12%2C12%2C0%2C0%2C1%2C0%2C24H112a8%2C8%2C0%2C0%2C0%2C0%2C16h32a8.32%2C8.32%2C0%2C0%2C0%2C1.79-.2l67-15.41.31-.08a8.6%2C8.6%2C0%2C0%2C1%2C6.3%2C15.9Z%22%3E%3C%2Fpath%3E%0A%3C%2Fsvg%3E%0A"
+                alt=""
+              />
+            </div>
+            <h3 class="card-title pt-4">Donation Program</h3>
+            <p class="card-text mb-3">
+              Encouraging people to donate calves to the initiative.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-5 fade-up fade-up.show text-white">
+    <div class="container-fluid">
+      <!-- Heading Row -->
+      <div class="row align-items-center px-5 mb-5">
+        <div class="col-md-6">
+          <h2 class="fw-bold display-5 d-flex align-items-center">
+            Area of Business
+          </h2>
+        </div>
+        <div class="col-md-6">
+          <p class="mb-0 text-white">
+            Gao Gotha blends agriculture, enterprise, and essential services to
+            build self-reliant rural ecosystems. By empowering farmers,
+            entrepreneurs, and communities, we create sustainable livelihoods
+            while ensuring growth, prosperity, and innovation in every village.
+          </p>
+        </div>
+      </div>
+
+      <div class="row area pt-3" *ngFor="let area of businessAreas">
+        <div class="col-md-6 pt-5 pb-5 px-5">
+          <h4 class="pl-3">{{ area.title }}</h4>
+        </div>
+        <div class="col-md-6">
+          <p class="pt-5 pb-4 fw-bold text-secondary">
+            {{ area.description }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="mt-5 fade-up fade-up.show pt-5">
+    <app-footer></app-footer>
+  </div>
+</div>

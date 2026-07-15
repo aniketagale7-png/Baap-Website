@@ -1,0 +1,99 @@
+.main {
+  background-color: #030014;
+}
+.innovating {
+  background-color: #030014;
+  background-image: 
+    url("https://baapcompany.com/wp-content/uploads/2025/02/Software-BG-4.webp"),
+    url("https://baapcompany.com/wp-content/uploads/2025/02/Software-BG-1.webp");
+  background-repeat: no-repeat, no-repeat;        /* No repeat for both */
+  background-size: 1440px auto, cover;            /* 1st fixed size, 2nd cover full */
+
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.bg-btn {
+  background: linear-gradient(to right, #8f00ff, #5715d8);
+}
+.global{
+    font-size: 5rem;
+}
+.img-details{
+    height: 23rem;
+}
+
+.innovating button,
+.innovating h1,
+.innovating h5 {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeSlideUp 1.5s ease forwards;
+}
+
+.innovating button { animation-delay: 0.3s; }
+.innovating h1 { animation-delay: 0.6s; }
+.innovating h5 { animation-delay: 1s; }
+
+@keyframes fadeSlideUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.service-card:last-child {
+  border-right: none;
+}
+.service-icon {
+  background: linear-gradient(135deg, #7633b5, #5446b0);
+  font-size: 28px;
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+}
+
+.service-text {
+  color: #bfbfbf;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.service-card:hover {
+  background: linear-gradient(135deg, #8a2be2, #6a5acd);
+}
+
+.numbers{
+    background: linear-gradient(135deg, #8a2be2, #6a5acd);
+  
+}
+.sec{
+    background-color: #09072C;
+}
+
+.card-body-img{
+    height: 5rem;
+}
+.card{
+    background-color: #09072C;
+}
+.card:hover {
+  cursor: pointer;
+  box-shadow: 0px 7px 29px 0px rgba(194, 164, 241, 0.5) !important;
+  transition: all 0.3s ease-in-out;
+}
+.area {
+  border-top: 0.5px solid #C8C8C81C;
+}
+.area:hover{
+    background-color: #09072C;
+}
+.fade-up {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}

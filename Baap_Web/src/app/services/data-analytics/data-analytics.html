@@ -1,0 +1,151 @@
+<div class="main container-fluid">
+  <div class="container-fluid pt-5 p-0">
+    <div
+      class="pt-5 innovating text-center d-flex flex-column justify-content-center align-items-center"
+    >
+      <button
+        class="btn bg-btn word-space-2 mt-5 text-white rounded-pill px-4 py-2"
+      >
+        <b>Data Analytics & Reports</b>
+      </button>
+
+      <h1 class="text-uppercase mt-3 text-white font-weight-bold">
+        PRECISION ANALYTICS & <br />REPORTING
+      </h1>
+
+      <h5 class="text-white-50 mt-5 lead pt-2">
+        Our data-driven solutions and efficient support services help
+        businesses<br />
+        make informed decisions, improve customer satisfaction, and drive<br />
+        operational efficiency.
+      </h5>
+    </div>
+  </div>
+
+  <section
+    *ngFor="let fpc of fpcData; let i = index"
+    class="mx-5 fade-up fade-up.show pt-5 pb-5 mt-5 min-vh-100 d-flex align-items-center"
+  >
+    <div class="row w-100 align-items-center">
+      <div
+        class="col-lg-6 col-md-12"
+        [ngClass]="{ 'order-lg-2': i % 2 !== 0, 'pl-5': i % 2 !== 0 }"
+      >
+        <h1 class="fw-bold mt-3 fs-1 text-white">{{ fpc.title }}</h1>
+        <p class="text-secondary fw-bold mt-3">{{ fpc.desc }}</p>
+
+        <ul class="list-unstyled fw-bold text-secondary mt-5">
+          <li *ngFor="let point of fpc.points" class="mb-2">
+            <i class="fa-solid fa-check" style="color: #7300ff"></i> {{ point }}
+          </li>
+        </ul>
+
+        <button
+          class="btn bg-btn word-space-2 mt-5 text-white rounded-pill px-4 py-2"
+        >
+          <b>Talk to Us <i class="bi bi-arrow-up-right ps-2"></i></b>
+        </button>
+      </div>
+
+      <div class="col-lg-6 col-md-12" [ngClass]="{ 'order-lg-1': i % 2 !== 0 }">
+        <img [src]="fpc.img" class="img-fluid rounded-4" [alt]="fpc.title" />
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="main">
+  <section class="container-fluid fade-up fade-up.show py-5">
+    <h2 class="fw-bold fs-1 mt-4 text-center text-white mb-5">
+      Our Approach
+    </h2>
+
+    <div class="row mx-5 pt-4">
+      <div class="col-md-4">
+        <div class="card h-100 text-white rounded-5 p-4 shadow">
+          <div class="card-body">
+            <div class="mb-3 fs-1">
+              <img
+                class="card-body-img"
+                src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%20256%20256%22%20fill%3D%22white%22%3E%0A%20%20%3Cpath%20d%3D%22M114.34%20154.34l96-96a8%208%200%200%201%2011.32%2011.32l-96%2096a8%208%200%200%201-11.32-11.32ZM128%2088a63.9%2063.9%200%200%201%2020.44%203.33%208%208%200%201%200%205.11-15.16A80%2080%200%200%200%2048.49%20160.88a8%208%200%200%200%207.94%207.12c.29%200%20.59%200%20.89-.05a8%208%200%200%200%207.07-8.83A64.92%2064.92%200%200%201%2064%20152a64.07%2064.07%200%200%201%2064-64Zm99.74%2013a8%208%200%200%200-14.24%207.3%2096.27%2096.27%200%200%201%205%2075.71H37.4A96.24%2096.24%200%200%201%20128%2056h.88a95%2095%200%200%201%2042.82%2010.5%208%208%200%201%200%207.3-14.23A112%20112%200%200%200%2022.34%20189a16.07%2016.07%200%200%200%2015.12%2011h181.07a16%2016%200%200%200%2015.11-10.71%20112.35%20112.35%200%200%200-5.9-88.3Z%22%3E%3C%2Fpath%3E%0A%3C%2Fsvg%3E%0A"
+                alt=""
+              />
+            </div>
+            <h3 class="card-title pt-4">Real-Time Insights</h3>
+            <p class="card-text mb-3">
+              Data-driven strategies to optimize decision-making.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 text-white rounded-4 p-4 shadow">
+          <div class="card-body">
+            <div class="mb-3 fs-1">
+              <img
+                class="card-body-img"
+                src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%23ffffff%22%20viewBox%3D%220%200%20256%20256%22%3E%0A%20%20%3Cpath%20d%3D%22M196.12%2C128c24.65-34.61%2C37.22-70.38%2C19.74-87.86S162.61%2C35.23%2C128%2C59.88C93.39%2C35.23%2C57.62%2C22.66%2C40.14%2C40.14S35.23%2C93.39%2C59.88%2C128c-24.65%2C34.61-37.22%2C70.38-19.74%2C87.86h0c5.63%2C5.63%2C13.15%2C8.14%2C21.91%2C8.14%2C18.48%2C0%2C42.48-11.17%2C66-27.88C151.47%2C212.83%2C175.47%2C224%2C194%2C224c8.76%2C0%2C16.29-2.52%2C21.91-8.14h0C233.34%2C198.38%2C220.77%2C162.61%2C196.12%2C128Zm8.43-76.55c7.64%2C7.64%2C2.48%2C32.4-18.52%2C63.28a300.33%2C300.33%2C0%2C0%2C0-21.19-23.57A300.33%2C300.33%2C0%2C0%2C0%2C141.27%2C70C172.15%2C49%2C196.91%2C43.8%2C204.55%2C51.45ZM176.29%2C128a289.14%2C289.14%2C0%2C0%2C1-22.76%2C25.53A289.14%2C289.14%2C0%2C0%2C1%2C128%2C176.29a289.14%2C289.14%2C0%2C0%2C1-25.53-22.76A289.14%2C289.14%2C0%2C0%2C1%2C79.71%2C128%2C298.62%2C298.62%2C0%2C0%2C1%2C128%2C79.71a289.14%2C289.14%2C0%2C0%2C1%2C25.53%2C22.76A289.14%2C289.14%2C0%2C0%2C1%2C176.29%2C128ZM51.45%2C51.45c2.2-2.21%2C5.83-3.35%2C10.62-3.35C73.89%2C48.1%2C92.76%2C55%2C114.72%2C70A304%2C304%2C0%2C0%2C0%2C91.16%2C91.16%2C300.33%2C300.33%2C0%2C0%2C0%2C70%2C114.73C49%2C83.85%2C43.81%2C59.09%2C51.45%2C51.45Zm0%2C153.1C43.81%2C196.91%2C49%2C172.15%2C70%2C141.27a300.33%2C300.33%2C0%2C0%2C0%2C21.19%2C23.57A304.18%2C304.18%2C0%2C0%2C0%2C114.73%2C186C83.85%2C207%2C59.09%2C212.2%2C51.45%2C204.55Zm153.1%2C0c-7.64%2C7.65-32.4%2C2.48-63.28-18.52a304.18%2C304.18%2C0%2C0%2C0%2C23.57-21.19A300.33%2C300.33%2C0%2C0%2C0%2C186%2C141.27C207%2C172.15%2C212.19%2C196.91%2C204.55%2C204.55ZM140%2C128a12%2C12%2C0%2C1%2C1-12-12A12%2C12%2C0%2C0%2C1%2C140%2C128Z%22%3E%3C%2Fpath%3E%0A%3C%2Fsvg%3E%0A"
+                alt=""
+              />
+            </div>
+            <h3 class="card-title pt-4">Process Automation</h3>
+            <p class="card-text">
+              AI-powered solutions for increased efficiency.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 text-white rounded-4 p-4 shadow">
+          <div class="card-body">
+            <div class="mb-3 fs-1">
+              <img
+                class="card-body-img"
+                src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%23ffffff%22%20viewBox%3D%220%200%20256%20256%22%3E%0A%20%20%3Cpath%20d%3D%22M80.57%2C117A8%2C8%2C0%2C0%2C1%2C91%2C112.57l29%2C11.61V96a8%2C8%2C0%2C0%2C1%2C16%2C0v28.18l29-11.61A8%2C8%2C0%2C1%2C1%2C171%2C127.43l-30.31%2C12.12L158.4%2C163.2a8%2C8%2C0%2C1%2C1-12.8%2C9.6L128%2C149.33%2C110.4%2C172.8a8%2C8%2C0%2C1%2C1-12.8-9.6l17.74-23.65L85%2C127.43A8%2C8%2C0%2C0%2C1%2C80.57%2C117ZM224%2C56v56c0%2C52.72-25.52%2C84.67-46.93%2C102.19-23.06%2C18.86-46%2C25.27-47%2C25.53a8%2C8%2C0%2C0%2C1-4.2%2C0c-1-.26-23.91-6.67-47-25.53C57.52%2C196.67%2C32%2C164.72%2C32%2C112V56A16%2C16%2C0%2C0%2C1%2C48%2C40H208A16%2C16%2C0%2C0%2C1%2C224%2C56Zm-16%2C0L48%2C56l0%2C56c0%2C37.3%2C13.82%2C67.51%2C41.07%2C89.81A128.25%2C128.25%2C0%2C0%2C0%2C128%2C223.62a129.3%2C129.3%2C0%2C0%2C0%2C39.41-22.2C194.34%2C179.16%2C208%2C149.07%2C208%2C112Z%22%3E%3C%2Fpath%3E%0A%3C%2Fsvg%3E%0A"
+                alt=""
+              />
+            </div>
+            <h3 class="card-title pt-4">Accuracy & Security</h3>
+            <p class="card-text mb-3">
+              Reliable, structured data management.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-5 fade-up fade-up.show text-white">
+    <div class="container-fluid">
+      <!-- Heading Row -->
+      <div class="row align-items-center px-5 mb-5">
+        <div class="col-md-6">
+          <h2 class="fw-bold display-5 d-flex align-items-center">
+           Why Choose Us?
+          </h2>
+        </div>
+        <div class="col-md-6">
+          <p class="mb-0 text-white">
+           At Baap, we deliver innovative, tailored solutions that drive real results. Our expert team ensures seamless integration with your existing systems while prioritizing your unique business needs.
+          </p>
+        </div>
+      </div>
+
+      <div class="row area pt-3" *ngFor="let area of businessAreas">
+        <div class="col-md-6 pt-5 pb-5 px-5">
+          <h4 class="pl-3">{{ area.title }}</h4>
+        </div>
+        <div class="col-md-6">
+          <p class="pt-5 pb-4 fw-bold text-secondary">
+            {{ area.description }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="mt-5 fade-up fade-up.show pt-5">
+    <app-footer></app-footer>
+  </div>
+</div>

@@ -1,0 +1,221 @@
+<div class="cursor-dot" [style.left.px]="x" [style.top.px]="y" [class.active]="isActive" [class.pressed]="isPressed">
+    <span class="icon">⬤</span>
+</div>
+<div class="main mt-4">
+    <div class="  m-0 p-0">
+        <div class="m-0 p-0 innovating">
+            <div class="pt-5 mt-5 text-center">
+                <button class="btn bg-btn word-space-2 mt-5 text-white rounded-pill px-4 py-2">
+                    <b>Our Service</b>
+                </button>
+
+                <h1 class="text-uppercase mt-3 text-white font-weight-bold">
+                    Tech that<br> Transforms Lives.
+                </h1>
+                <h5 class="text-white-50 lead fw-medium mt-5 pt-2">
+                    At The Baap Company, we turn village students into world-class<br> developers, creating apps that
+                    solve
+                    global problems while supporting<br> local farming. Be part of a movement that redefines education,
+                    innovation,<br> and impact. Brilliance has no boundaries.
+                </h5>
+            </div>
+        </div>
+        <div class="p-5 fade-up ">
+            <img src="https://baapcompany.com/wp-content/uploads/2025/02/services_bg_thebaapcompany-1536x640.png" alt=""
+                class="rounded-5 img-fluid fixed-img">
+        </div>
+        <div class="row p-5 fade-up">
+            <div class="col-6 text-uppercase-row text-white font-weight-bold">
+                BAAP Services
+            </div>
+            <div class="col-6 text-white ">
+                The Baap Company blends AI solutions, software services, tech education, and<br> digital marketing to unlock
+                rural talent, creating global impact through<br> innovation and empowerment.
+            </div>
+        </div>
+      
+
+<div class="row p-5 fade-up" *ngFor="let solution of solutions; let i = index">
+
+  <!-- Left text / right image -->
+  <div class="col-6 mt-5" *ngIf="i % 2 === 0">
+    <button class="btn bg-btn word-space-2 mt-5 text-white rounded-pill px-4 py-2 mt-4">
+      <b>{{ solution.title }}</b>
+    </button>
+
+    <div class="text-uppercase-row text-white font-weight-bold">
+      {{ solution.heading }}
+    </div>
+
+    <div class="text-white">
+      {{ solution.description }}
+    </div>
+
+    <div class="row text-white mt-5">
+      <div class="col-md-6" *ngFor="let col of solution.features">
+        <ul class="list-unstyled">
+          <li class="mb-2" *ngFor="let feature of col">
+            <i class="bi bi-check2 me-2 text-purple"></i> {{ feature }}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div>
+      <button class="btn bg-btn word-space-2 mt-5 text-white rounded-pill px-5 py-3">
+        <b>Learnmore <i class="bi bi-arrow-up-right p-1"></i></b>
+      </button>
+    </div>
+  </div>
+
+  <!-- Right image -->
+  <div class="col-6" *ngIf="i % 2 === 0">
+    <img [src]="solution.image" alt="{{ solution.title }}" class="rounded-5 img-fluid fixed-img">
+  </div>
+
+  <!-- Alternate: Left image / right text -->
+  <div class="col-6" *ngIf="i % 2 === 1">
+    <img [src]="solution.image" alt="{{ solution.title }}" class="rounded-5 img-fluid fixed-img">
+  </div>
+
+  <div class="col-6 mt-5 p-5" *ngIf="i % 2 === 1">
+    <button class="btn bg-btn word-space-2 mt-5 text-white rounded-pill px-4 py-2 mt-4">
+      <b>{{ solution.title }}</b>
+    </button>
+
+    <div class="text-uppercase-row text-white font-weight-bold">
+      {{ solution.heading }}
+    </div>
+
+    <div class="text-white">
+      {{ solution.description }}
+    </div>
+
+    <div class="row text-white mt-5">
+      <div class="col-md-6" *ngFor="let col of solution.features">
+        <ul class="list-unstyled">
+          <li class="mb-2" *ngFor="let feature of col">
+            <i class="bi bi-check2 me-2 text-purple"></i> {{ feature }}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div>
+      <button class="btn bg-btn word-space-2 mt-5 text-white rounded-pill px-5 py-3">
+        <b>Learnmore<i class="bi bi-arrow-up-right p-1"></i></b>
+      </button>
+    </div>
+  </div>
+
+</div>
+<div class=" p-5">
+  <div class="row align-items-center">
+    <!-- Left Content -->
+    <div class="col-md-6 text-white fade-up">
+      <h2 class="fw-bold">Our Service Coverage</h2>
+      <p class="text-white-50 mt-3">
+        The Baap Company is a global leader in delivering exceptional services,
+        specializing in catering to international clients, particularly in the
+        USA and Europe. With a deep commitment to excellence and innovation, we
+        pride ourselves on meeting the diverse and dynamic needs of our clientele.
+      </p>
+
+      <div class="row mt-4">
+        <div class="col-6">
+          <p class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> The United States</p>
+          <p class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Canada</p>
+          <p class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> UK</p>
+        </div>
+        <div class="col-6">
+          <p class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Europe</p>
+          <p class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> India</p>
+          <p class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Australia</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right World Map -->
+    <div class="col-md-6 text-center mt-4 mt-md-0 fade-up">
+      <img src="https://baapcompany.com/wp-content/uploads/2025/02/tbc_map_services_revised-768x475.png" alt="World Map" class="img-fluid world-map" />
+    </div>
+  </div>
+</div>
+
+
+     <div class="text-center mt-5 pt-5">
+  <button
+    class="btn bg-btn word-space-2 text-white mt-5 rounded-pill px-4 py-2 fade-up"
+  >
+    {{ buttonText }}
+  </button>
+
+  <h1 class="text-white pt-5 fade-up"><b>{{ title }}</b></h1>
+
+  <p class="text-white-50 pt-4 word-space-2 fade-up">
+    {{ description }}
+  </p>
+</div>
+
+        <div class="custom-carousel mx-auto overflow-hidden fade-up">
+            <div class="custom-carousel-track d-flex"
+                [style.transform]="'translateX(-' + currentIndex * cardWidth + 'px)'"
+                style="transition: transform 0.5s ease-in-out">
+                <div *ngFor="let card of cards"
+                    class="custom-carousel-card card text-white p-4 mx-4 border-0 rounded-4 mx-2">
+                    <div class="justify-content-between d-flex fade-up">
+                        <div class="text-start mt-3">
+                            <img [src]="card.img1" class="rounded-circle mb-3" width="80" height="80" />
+                        </div>
+                        <div class="text-start mt-3">
+                            <img [src]="card.img2" class="mb-3" width="60" height="60" />
+                        </div>
+                    </div>
+                    <h4 class="font-weight-bold mb-1 mt-2">{{ card.name }}</h4>
+                    <p class="mb-3 mt-2">{{ card.title }}</p>
+                    <small class="mt-2 mb-4 word-space-2">{{ card.text }}</small>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center mt-5">
+                <button
+                    class="d-flex align-items-center mx-4 carousel-button justify-content-center rounded-circle border border-white text-white bg-transparent"
+                    (click)="prevCard()">
+                    &larr;
+                </button>
+                <button
+                    class="d-flex align-items-center carousel-button justify-content-center rounded-circle border border-white text-white bg-transparent ml-3"
+                    (click)="nextCard()">
+                    &rarr;
+                </button>
+            </div>
+        </div>
+        <div class="row ai-container text-white p-5 m-5 fade-up align-items-center">
+            <!-- Left Section -->
+            <div class="col-md-6 mb-4 mb-md-0">
+                <h2 class="mb-3">
+                    Baap now offers <span>AI Services</span>
+                </h2>
+                <p class="mb-4 fs-6">
+                    Ready to unlock the potential of AI for your business? Talk to us to get
+                    a tailored solution today!
+                </p>
+                <button class="talk-button bg-white text-primary">
+                    <b>Talk to Us</b>
+                </button>
+            </div>
+
+            <!-- Right Section -->
+            <div class="col-md-6 text-center">
+                <img src="https://baapcompany.com/wp-content/uploads/2025/02/AI-Software-Company-CTA-Image-3.webp"
+                    alt="AI Robot" class="robot small img-fluid" style="max-height: 325px; width: auto;" />
+            </div>
+        </div>
+
+      <app-footer></app-footer>
+    </div>
+</div>
+
+
+
+

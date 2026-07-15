@@ -1,0 +1,115 @@
+.background-grid {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 0;
+}
+.main {
+  background-color: #030014;
+}
+.bg-btn {
+  background: linear-gradient(to right, #8f00ff, #5715d8);
+}
+.text-uppercase{
+    font-size: 4.5rem;
+}
+
+.innovating {
+  background-color: #030014;
+  background-image: 
+    url("https://baapcompany.com/wp-content/uploads/2025/02/Software-BG-4.webp"),
+    url("https://baapcompany.com/wp-content/uploads/2025/02/Software-BG-1.webp");
+  background-repeat: no-repeat, no-repeat;        /* No repeat for both */
+  background-size: 1440px auto, cover;            /* 1st fixed size, 2nd cover full */
+
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.innovating button,
+.innovating h1,
+.innovating h5 {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeSlideUp 1.5s ease forwards;
+}
+
+.innovating button { animation-delay: 0.3s; }
+.innovating h1 { animation-delay: 0.6s; }
+.innovating h5 { animation-delay: 1s; }
+
+.text {
+  font-size: 70px;
+}
+.image {
+  border-radius: 25px;
+  max-width: 100%;
+  height: auto;
+}
+
+.card-body-img{
+    height: 5rem;
+}
+.card{
+    background-color: #09072C;
+}
+.card:hover {
+  cursor: pointer;
+  box-shadow: 0px 7px 29px 0px rgba(194, 164, 241, 0.5) !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.area {
+  border-top: 0.5px solid #C8C8C81C;
+}
+.area:hover{
+    background-color: #09072C;
+}
+
+//Animation
+
+// .animate-head span,
+// .animate-head h1,
+// .animate-head p {
+//   opacity: 0;
+//   transform: translateY(40px);
+//   animation: fadeSlideUp 1.5s ease forwards;
+// }
+
+// .animate-head span {
+//   animation-delay: 0.3s;
+// }
+// .animate-head h1 {
+//   animation-delay: 0.6s;
+// }
+// .animate-head p {
+//   animation-delay: 1s;
+// }
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.scroll-image {
+  opacity: 0;
+  transform: translateY(-200px); // खूप वरून सुरू
+  transition: all 0.8s ease-out; // fast येण्यासाठी कमी duration
+}
+
+.scroll-image.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+

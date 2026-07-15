@@ -1,0 +1,16 @@
+<!-- Top Bar and Navbar -->
+<app-navbar></app-navbar>
+
+<!-- Routed Page Content -->
+<div class="page-content">
+  <router-outlet></router-outlet>
+</div>
+<div
+  class="cursor-dot"
+  [style.left.px]="x"
+  [style.top.px]="y"
+  [class.active]="isActive"
+  [class.pressed]="isPressed"
+>
+  <span class="icon">⬤</span>
+</div>

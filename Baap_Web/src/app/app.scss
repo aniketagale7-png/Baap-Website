@@ -1,0 +1,30 @@
+
+.cursor-dot {
+  position: fixed;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+  width: 28px;
+  height: 28px;
+  border-radius:50%;
+  outline: 2px solid rgb(119, 1, 255);
+  color: #fff;
+  z-index: 999999;
+  display: grid;
+  place-items: center;
+  transition: width 0.15s, height 0.15s, background 0.15s, transform 0.06s;
+  will-change: left, top, transform;
+  pointer-events: none;
+}
+.cursor-dot .icon {
+  font-size: 10px;
+  line-height: 1;
+  user-select: none;
+}
+.cursor-dot.active {
+  transform: translate(-50%, -50%) scale(1.6);
+  background: rgba(92, 17, 231, 0.25);
+}
+.cursor-dot.pressed {
+  transform: translate(-50%, -50%) scale(1.5);
+}

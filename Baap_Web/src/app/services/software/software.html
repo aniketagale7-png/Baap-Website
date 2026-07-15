@@ -1,0 +1,158 @@
+<div class="container-fluid main">
+  <div class="container-fluid pt-5 p-0">
+    <div
+      class="innovating mt-4 text-center d-flex flex-column justify-content-center align-items-center"
+    >
+      <button
+        class="btn bg-btn word-space-2 mt-0 text-white rounded-pill px-4 pb-2"
+      >
+        <b>Software Services </b>
+      </button>
+
+      <h1 class="text-uppercase mt-3 text-white font-weight-bold">
+        Custom Software<br />
+        Development
+      </h1>
+
+      <h5 class="text-white-50 mt-3 lead">
+        We offer a wide range of Software Services designed to help
+        businesses<br />
+        thrive in a rapidly evolving digital landscape.
+      </h5>
+    </div>
+  </div>
+
+  <div class="text-center">
+    <img
+      class="scroll-image image"
+      [class.animate]="imageInView"
+      src="https://baapcompany.com/wp-content/uploads/revslider/Claymorphism-Carousel1/theBaapCompanyDevelopers_WorkingonSoftware.png"
+      alt=""
+    />
+  </div>
+  <section
+    *ngFor="let fpc of fpcData; let i = index"
+    class="mx-5 pt-5 pb-5 mt-5 min-vh-100 d-flex align-items-center"
+  >
+    <div class="row w-100 align-items-center">
+      <div
+        class="col-lg-6 col-md-12"
+        [ngClass]="{ 'order-lg-2': i % 2 !== 0, 'pl-5': i % 2 !== 0 }"
+      >
+        <h1 class="fw-bold mt-3 fs-1 text-white">{{ fpc.title }}</h1>
+        <p class="text-secondary fw-bold mt-3">{{ fpc.desc }}</p>
+
+        <ul class="list-unstyled fw-bold text-secondary mt-5">
+          <li *ngFor="let point of fpc.points" class="mb-2">
+            <i class="fa-solid fa-check" style="color: #7300ff"></i> {{ point }}
+          </li>
+        </ul>
+
+        <button
+          class="btn bg-btn word-space-2 mt-5 text-white rounded-pill px-4 py-2"
+        >
+          <b>Get Started <i class="bi bi-arrow-up-right ps-2"></i></b>
+        </button>
+      </div>
+
+      <div class="col-lg-6 col-md-12" [ngClass]="{ 'order-lg-1': i % 2 !== 0 }">
+        <img [src]="fpc.img" class="img-fluid rounded-4" [alt]="fpc.title" />
+      </div>
+    </div>
+  </section>
+  <section class="py-5">
+    <h2 class="container fw-bold fs-1 mt-4 text-white mb-5">Our Approach</h2>
+
+    <div class="row mx-5 pt-4">
+      <div class="col-md-4">
+        <div class="card h-100 text-white rounded-5 p-4 shadow">
+          <div class="card-body">
+            <div class="mb-3 fs-1">
+              <img
+                class="card-body-img"
+                src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22white%22%20viewBox%3D%220%200%20256%20256%22%3E%0A%20%20%3Cpath%20d%3D%22M254.3%2C107.91%2C228.78%2C56.85a16%2C16%2C0%2C0%2C0-21.47-7.15L182.44%2C62.13%2C130.05%2C48.27a8.14%2C8.14%2C0%2C0%2C0-4.1%2C0L73.56%2C62.13%2C48.69%2C49.7a16%2C16%2C0%2C0%2C0-21.47%2C7.15L1.7%2C107.9a16%2C16%2C0%2C0%2C0%2C7.15%2C21.47l27%2C13.51%2C55.49%2C39.63a8.06%2C8.06%2C0%2C0%2C0%2C2.71%2C1.25l64%2C16a8%2C8%2C0%2C0%2C0%2C7.6-2.1l55.07-55.08%2C26.42-13.21a16%2C16%2C0%2C0%2C0%2C7.15-21.46Zm-54.89%2C33.37L165%2C113.72a8%2C8%2C0%2C0%2C0-10.68.61C136.51%2C132.27%2C116.66%2C130%2C104%2C122L147.24%2C80h31.81l27.21%2C54.41ZM41.53%2C64%2C62%2C74.22%2C36.43%2C125.27%2C16%2C115.06Zm116%2C119.13L99.42%2C168.61l-49.2-35.14%2C28-56L128%2C64.28l9.8%2C2.59-45%2C43.68-.08.09a16%2C16%2C0%2C0%2C0%2C2.72%2C24.81c20.56%2C13.13%2C45.37%2C11%2C64.91-5L188%2C152.66Zm62-57.87-25.52-51L214.47%2C64%2C240%2C115.06Zm-87.75%2C92.67a8%2C8%2C0%2C0%2C1-7.75%2C6.06%2C8.13%2C8.13%2C0%2C0%2C1-1.95-.24L80.41%2C213.33a7.89%2C7.89%2C0%2C0%2C1-2.71-1.25L51.35%2C193.26a8%2C8%2C0%2C0%2C1%2C9.3-13l25.11%2C17.94L126%2C208.24A8%2C8%2C0%2C0%2C1%2C131.82%2C217.94Z%22%3E%3C%2Fpath%3E%0A%3C%2Fsvg%3E%0A"
+                alt=""
+              />
+            </div>
+            <h3 class="card-title pt-4">Collaboration Driven</h3>
+            <p class="card-text mb-3">
+              We take a collaborative, results-driven approach to every project.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 text-white rounded-4 p-4 shadow">
+          <div class="card-body">
+            <div class="mb-3 fs-1">
+              <img
+                class="card-body-img"
+                src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22white%22%20viewBox%3D%220%200%20256%20256%22%3E%0A%20%20%3Cpath%20d%3D%22M244.8%2C150.4a8%2C8%2C0%2C0%2C1-11.2-1.6A51.6%2C51.6%2C0%2C0%2C0%2C192%2C128a8%2C8%2C0%2C0%2C1-7.37-4.89%2C8%2C8%2C0%2C0%2C1%2C0-6.22A8%2C8%2C0%2C0%2C1%2C192%2C112a24%2C24%2C0%2C1%2C0-23.24-30%2C8%2C8%2C0%2C1%2C1-15.5-4A40%2C40%2C0%2C1%2C1%2C219%2C117.51a67.94%2C67.94%2C0%2C0%2C1%2C27.43%2C21.68A8%2C8%2C0%2C0%2C1%2C244.8%2C150.4ZM190.92%2C212a8%2C8%2C0%2C1%2C1-13.84%2C8%2C57%2C57%2C0%2C0%2C0-98.16%2C0%2C8%2C8%2C0%2C1%2C1-13.84-8%2C72.06%2C72.06%2C0%2C0%2C1%2C33.74-29.92%2C48%2C48%2C0%2C1%2C1%2C58.36%2C0A72.06%2C72.06%2C0%2C0%2C1%2C190.92%2C212ZM128%2C176a32%2C32%2C0%2C1%2C0-32-32A32%2C32%2C0%2C0%2C0%2C128%2C176ZM72%2C120a8%2C8%2C0%2C0%2C0-8-8A24%2C24%2C0%2C1%2C1%2C87.24%2C82a8%2C8%2C0%2C1%2C0%2C15.5-4A40%2C40%2C0%2C1%2C0%2C37%2C117.51%2C67.94%2C67.94%2C0%2C0%2C0%2C9.6%2C139.19a8%2C8%2C0%2C1%2C0%2C12.8%2C9.61A51.6%2C51.6%2C0%2C0%2C1%2C64%2C128%2C8%2C8%2C0%2C0%2C0%2C72%2C120Z%22%3E%3C%2Fpath%3E%0A%3C%2Fsvg%3E%0A"
+                alt=""
+              />
+            </div>
+            <h3 class="card-title pt-4">Team Integration</h3>
+            <p class="card-text">
+              We collaborate closely to ensure our solutions align with your
+              vision.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 text-white rounded-4 p-4 shadow">
+          <div class="card-body">
+            <div class="mb-3 fs-1">
+              <img
+                class="card-body-img"
+                src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22white%22%20viewBox%3D%220%200%20256%20256%22%3E%0A%20%20%3Cpath%20d%3D%22M201.89%2C54.66A103.43%2C103.43%2C0%2C0%2C0%2C128.79%2C24H128A104%2C104%2C0%2C0%2C0%2C24%2C128v56a24%2C24%2C0%2C0%2C0%2C24%2C24H64a24%2C24%2C0%2C0%2C0%2C24-24V144a24%2C24%2C0%2C0%2C0-24-24H40.36A88.12%2C88.12%2C0%2C0%2C1%2C190.54%2C65.93%2C87.39%2C87.39%2C0%2C0%2C1%2C215.65%2C120H192a24%2C24%2C0%2C0%2C0-24%2C24v40a24%2C24%2C0%2C0%2C0%2C24%2C24h24a24%2C24%2C0%2C0%2C1-24%2C24H136a8%2C8%2C0%2C0%2C0%2C0%2C16h56a40%2C40%2C0%2C0%2C0%2C40-40V128A103.41%2C103.41%2C0%2C0%2C0%2C201.89%2C54.66ZM64%2C136a8%2C8%2C0%2C0%2C1%2C8%2C8v40a8%2C8%2C0%2C0%2C1-8%2C8H48a8%2C8%2C0%2C0%2C1-8-8V136Zm128%2C56a8%2C8%2C0%2C0%2C1-8-8V144a8%2C8%2C0%2C0%2C1%2C8-8h24v56Z%22%3E%3C%2Fpath%3E%0A%3C%2Fsvg%3E%0A"
+                alt=""
+              />
+            </div>
+            <h3 class="card-title pt-4">End-to-End Support</h3>
+            <p class="card-text mb-3">
+              From planning to maintenance, we support your project’s success
+              every step of the way.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-5 text-white">
+    <div class="">
+      <!-- Heading Row -->
+      <div class="row align-items-center px-5 mb-5">
+        <div class="col-md-6">
+          <h2 class="fw-bold display-5 d-flex align-items-center">
+            Why Choose Us?
+          </h2>
+        </div>
+        <div class="col-md-6">
+          <p class="mb-0 text-white">
+            At Baap, we deliver innovative, tailored solutions that drive real
+            results. Our expert team ensures seamless integration with your
+            existing systems while prioritizing your unique business needs.
+          </p>
+        </div>
+      </div>
+
+      <div class="row area pt-3" *ngFor="let area of businessAreas">
+        <div class="col-md-6 pt-5 pb-5 px-5">
+          <h4 class="pl-3">{{ area.title }}</h4>
+        </div>
+        <div class="col-md-6">
+          <p class="pt-5 pb-4 fw-bold text-secondary">
+            {{ area.description }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="mt-5 pt-5">
+    <app-footer></app-footer>
+  </div>
+</div>
